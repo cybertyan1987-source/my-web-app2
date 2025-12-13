@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH MIND</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+    :root{
+      --bg-color:#ffffff;
+      --bg-block:#f2f2f2;
+      --text-color:#222;
+      --button-bg:#2563eb;
+      --button-text:#fff;
+    }
+    body{
+  font-family: system-ui;
+  margin:0;
+  padding:16px;
+  background: var(--bg-color);
+  color: var(--text-color);
+    }
+    h3{ font-size:1.3rem; margin-bottom:20px; }
+    img{ border-radius:10px; }
+    .English{
+        display: flex;
+        justify-content: center;
+    }
+    .catalog{
+        padding: 10px 20px;
+        font-size: medium;
+        border-radius: 25px;
+        border: none;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .catalogue{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+    .catalogue > div {
+        display: flex;
+        justify-content: center;
+    }
+    .books_catalogue{
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+    .books_catalog{
+        padding: 10px 20px;
+        font-size: medium;
+        border-radius: 25px;
+        border: none;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .English_File{
+        display: none;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .English_File img{
+        width: 100px;
+        border-radius: 8px;
+    }
+
+    .English_File h2{
+        margin: 0;
+    }
+
+    .download{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .btn-download{
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        background: #2563eb;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.9s ease;
+    }
+
+    .btn-download:hover{
+        background-color: #c75e12;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="English">
+    <img src="Logo\English Mind.jpg" alt="English Mind Logo" width="500" height="300">
+    </div>
+    <h3>Welcome to ENGLISH MIND</h3>
+    <p>Your go-to resource for English learning materials. Explore our collection of books and solutions designed to enhance your language skills.</p>
+
+    <!-- Основной каталог -->
+
+    <div id="catalogue", class="catalogue">
+        <div>
+            <button class="catalog", onclick="goto('books')">Books</button>
+        </div>
+        <div>
+            <button class="catalog", onclick="goto('magazines')">Magazines</button>
+        </div>
+        <div>
+            <button class="catalog", onclick="goto('vocabulary')">Vocabulary</button>
+        </div>
+        <div>
+            <button class="catalog", onclick="goto('grammar')">Grammar</button>
+        </div>
+    </div>
+
+    <!-- Под каталог книг -->
+
+     <div class="books_catalogue">
+        <div>
+            <button class="books_catalog", onclick="gotoBooks('english_file')">English File</button>
+        </div>
+        <div>
+            <button class="books_catalog">Soluton</button>
+        </div>
+        <div>
+            <button class="books_catalog">Speakout</button>
+        </div>
+        <div>
+            <button class="books_catalog">Headway</button>
+        </div>
+        <div>
+            <button class="books_catalog", onclick="gotoBooks('back')">Back</button>
+        </div>
+     </div>
+
+
+     <!-- English File -->
+
+     <div class="English_File">
+
+        <img src="Logo/EF+1.jpg" alt="English File Logo" >
+        <div>
+            <h2>English File Beginer</h2>
+            <div class="download">
+                <button class="btn-download", onclick="download('')">Student's Book</button>
+                <button class="btn-download", onclick="download('')">Audio SB</button>
+                <button class="btn-download", onclick="download('')">Workbook</button>
+                <button class="btn-download", onclick="download('')">Audio WB</button>
+            </div>
+        </div>
+
+        <img src="Logo/EF+2.jpg" alt="English File Logo">
+        <div>
+            <h2>English File Elementary</h2>
+            <div class="download">
+                <button class="btn-download", onclick="download('')">Student's Book</button>
+                <button class="btn-download", onclick="download('')">Audio SB</button>
+                <button class="btn-download", onclick="download('')">Workbook</button>
+                <button class="btn-download", onclick="download('')">Audio WB</button>
+            </div>
+        </div>
+
+        <img src="Logo/EF+3.jpg" alt="English File Logo" >
+        <div>
+            <h2>English File Pre-Intermediate</h2>
+            <div class="download">
+                <button class="btn-download", onclick="download('')">Student's Book</button>
+                <button class="btn-download", onclick="download('')">Audio SB</button>
+                <button class="btn-download", onclick="download('')">Workbook</button>
+                <button class="btn-download", onclick="download('')">Audio WB</button>
+            </div>
+        </div>
+
+        <img src="Logo/EF+4.jpg" alt="English File Logo" >
+        <div>
+            <h2>English File Intermediate</h2>
+            <div class="download">
+                <button class="btn-download", onclick="download('')">Student's Book</button>
+                <button class="btn-download", onclick="download('')">Audio SB</button>
+                <button class="btn-download", onclick="download('')">Workbook</button>
+                <button class="btn-download", onclick="download('')">Audio WB</button>
+            </div>
+        </div>
+     </div>
+
+    <script>
+
+        function goto(section) {
+            if (section === 'books') {
+                document.getElementById('catalogue').style.display = 'none';
+                document.querySelector('.books_catalogue').style.display = 'grid';
+            }
+        }
+
+        function gotoBooks(section) {
+            if (section === 'back') {
+                document.querySelector('.books_catalogue').style.display = 'none';
+                document.getElementById('catalogue').style.display = 'grid';
+            }
+            if (section === 'english_file') {
+                document.querySelector('.books_catalogue').style.display = 'none';
+                document.querySelector('.English_File').style.display = 'flex';
+            }
+        }
+
+
+    </script>
+</body>
+</html>
