@@ -84,9 +84,21 @@
         margin-bottom: 16px;
     }
 
+    .file_item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
     .English_File img{
         width: 80px;
         border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .right_logo {
+        flex: 1;
     }
 
     .English_File h2{
@@ -169,47 +181,55 @@
 
      <div class="English_File">
 
-        <img src="Logo/EF+1.jpg" alt="English File Logo" >
-        <div>
-            <h2>English File Beginer</h2>
-            <div class="download">
-                <button class="btn-download", onclick="download('')">Student's Book</button>
-                <button class="btn-download", onclick="download('')">Audio SB</button>
-                <button class="btn-download", onclick="download('')">Workbook</button>
-                <button class="btn-download", onclick="download('')">Audio WB</button>
+        <div class="file_item">
+            <img src="Logo/EF+1.jpg" alt="English File Logo" >
+            <div class="right_logo">
+                <h2>English File Beginer</h2>
+                <div class="download">
+                    <button class="btn-download", onclick="download('')">Student's Book</button>
+                    <button class="btn-download", onclick="download('')">Audio SB</button>
+                    <button class="btn-download", onclick="download('')">Workbook</button>
+                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                </div>
             </div>
         </div>
 
-        <img src="Logo/EF+2.webp" alt="English File Logo">
-        <div>
-            <h2>English File Elementary</h2>
-            <div class="download">
-                <button class="btn-download", onclick="download('')">Student's Book</button>
-                <button class="btn-download", onclick="download('')">Audio SB</button>
-                <button class="btn-download", onclick="download('')">Workbook</button>
-                <button class="btn-download", onclick="download('')">Audio WB</button>
+        <div class="file_item">
+            <img src="Logo/EF+2.webp" alt="English File Logo">
+            <div class="right_logo">
+                <h2>English File Elementary</h2>
+                <div class="download">
+                    <button class="btn-download", onclick="download('')">Student's Book</button>
+                    <button class="btn-download", onclick="download('')">Audio SB</button>
+                    <button class="btn-download", onclick="download('')">Workbook</button>
+                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                </div>
             </div>
         </div>
 
-        <img src="Logo/EF+3.jpg" alt="English File Logo" >
-        <div>
-            <h2>English File Pre-Intermediate</h2>
-            <div class="download">
-                <button class="btn-download", onclick="download('')">Student's Book</button>
-                <button class="btn-download", onclick="download('')">Audio SB</button>
-                <button class="btn-download", onclick="download('')">Workbook</button>
-                <button class="btn-download", onclick="download('')">Audio WB</button>
+        <div class="file_item">
+            <img src="Logo/EF+3.jpg" alt="English File Logo" >
+            <div class="right_logo">
+                <h2>English File Pre-Intermediate</h2>
+                <div class="download">
+                    <button class="btn-download", onclick="download('')">Student's Book</button>
+                    <button class="btn-download", onclick="download('')">Audio SB</button>
+                    <button class="btn-download", onclick="download('')">Workbook</button>
+                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                </div>
             </div>
         </div>
 
-        <img src="Logo/EF+4.jpg" alt="English File Logo" >
-        <div>
-            <h2>English File Intermediate</h2>
-            <div class="download">
-                <button class="btn-download", onclick="download('')">Student's Book</button>
-                <button class="btn-download", onclick="download('')">Audio SB</button>
-                <button class="btn-download", onclick="download('')">Workbook</button>
-                <button class="btn-download", onclick="download('')">Audio WB</button>
+        <div class="file_item">
+            <img src="Logo/EF+4.jpg" alt="English File Logo" >
+            <div class="right_logo">
+                <h2>English File Intermediate</h2>
+                <div class="download">
+                    <button class="btn-download", onclick="download('')">Student's Book</button>
+                    <button class="btn-download", onclick="download('')">Audio SB</button>
+                    <button class="btn-download", onclick="download('')">Workbook</button>
+                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                </div>
             </div>
         </div>
      </div>
@@ -238,6 +258,3 @@
     </script>
 </body>
 </html>
-
-
-
