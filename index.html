@@ -153,12 +153,26 @@
         background-color: #1e40af;
     }
 
+    .file_catalog{
+        padding: 10px 20px;
+        font-size: medium;
+        border-radius: 25px;
+        border: none;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     </style>
 </head>
 <body>
     <div class="English">
-    <img src="English Mind.jpg" alt="English Mind Logo" width="500" height="300">
+    <img src="Logo\English Mind.jpg" alt="English Mind Logo" width="500" height="300">
     </div>
     <h3>Welcome to ENGLISH MIND</h3>
     <p>Your go-to resource for English learning materials. Explore our collection of books and solutions designed to enhance your language skills.</p>
@@ -206,7 +220,7 @@
      <div class="English_File">
 
         <div class="file_item">
-            <img src="EF+1.jpg" alt="English File Logo" >
+            <img src="Logo/EF+1.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Beginer</h2>
                 <p class="book_description">A comprehensive beginner's course designed for absolute learners. This book introduces fundamental English vocabulary and grammar structures with interactive activities and everyday dialogue practice.</p>
@@ -220,7 +234,7 @@
         </div>
 
         <div class="file_item">
-            <img src="EF+2.webp" alt="English File Logo">
+            <img src="Logo/EF+2.webp" alt="English File Logo">
             <div class="right_logo">
                 <h2>English File Elementary</h2>
                 <p class="book_description">Perfect for elementary learners ready to build their foundational skills. Features practical communication tasks, listening exercises, and real-world language scenarios to boost confidence in everyday English.</p>
@@ -234,7 +248,7 @@
         </div>
 
         <div class="file_item">
-            <img src="EF+3.jpg" alt="English File Logo" >
+            <img src="Logo/EF+3.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Pre-Intermediate</h2>
                 <p class="book_description">Designed to bridge the gap between elementary and intermediate levels. This course develops communication skills with more complex grammar structures, extended listening passages, and advanced conversation practice.</p>
@@ -248,7 +262,7 @@
         </div>
 
         <div class="file_item">
-            <img src="EF+4.jpg" alt="English File Logo" >
+            <img src="Logo/EF+4.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Intermediate</h2>
                 <p class="book_description">Comprehensive intermediate course for fluent English learners. Covers advanced grammar, sophisticated vocabulary, engaging cultural topics, and authentic materials for confident communication at intermediate level.</p>
@@ -260,6 +274,8 @@
                 </div>
             </div>
         </div>
+
+        <button class="file_catalog", onclick="download('back')">Back</button>
      </div>
 
     <script>
@@ -279,6 +295,13 @@
             if (section === 'english_file') {
                 document.querySelector('.books_catalogue').style.display = 'none';
                 document.querySelector('.English_File').style.display = 'block';
+            }
+        }
+
+        function download(section) {
+            if (section === 'back') {
+                document.querySelector('.English_File').style.display = 'none';
+                document.querySelector('.books_catalogue').style.display = 'grid';
             }
         }
 
