@@ -14,11 +14,12 @@
       --button-text:#fff;
     }
     body{
-  font-family: system-ui;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin:0;
   padding:16px;
   background: var(--bg-color);
   color: var(--text-color);
+  line-height: 1.6;
     }
     h3{ font-size:1.3rem; margin-bottom:20px; }
 
@@ -86,47 +87,70 @@
 
     .file_item {
         display: flex;
-        gap: 12px;
+        gap: 16px;
         align-items: flex-start;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
+        background: var(--bg-block);
+        padding: 16px;
+        border-radius: 12px;
+        min-height: 200px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .English_File img{
-        width: 80px;
+        width: 100px;
+        height: 140px;
         border-radius: 8px;
         flex-shrink: 0;
+        object-fit: cover;
     }
 
     .right_logo {
         flex: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     .English_File h2{
-        margin: 0;
+        margin: 0 0 8px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1f2937;
+    }
+
+    .book_description {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin: 8px 0 12px 0;
+        line-height: 1.5;
     }
 
     .download{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 300px;
-        height: 100px;
-        gap: 10px;
+        gap: 8px;
         cursor: pointer;
+        margin-top: auto;
     }
 
     .btn-download{
-        padding: 12px;
+        padding: 8px 12px;
         border: none;
-        border-radius: 10px;
-        font-size: 0.95rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
         background: #2563eb;
         color: #fff;
         cursor: pointer;
-        transition: background-color 0.9s ease;
+        transition: background-color 0.3s ease;
+        font-weight: 500;
     }
 
     .btn-download:hover{
-        background-color: #c75e12;
+        background-color: #1d4ed8;
+    }
+
+    .btn-download:active{
+        background-color: #1e40af;
     }
 
     
@@ -185,6 +209,7 @@
             <img src="EF+1.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Beginer</h2>
+                <p class="book_description">A comprehensive beginner's course designed for absolute learners. This book introduces fundamental English vocabulary and grammar structures with interactive activities and everyday dialogue practice.</p>
                 <div class="download">
                     <button class="btn-download", onclick="download('')">Student's Book</button>
                     <button class="btn-download", onclick="download('')">Audio SB</button>
@@ -198,6 +223,7 @@
             <img src="EF+2.webp" alt="English File Logo">
             <div class="right_logo">
                 <h2>English File Elementary</h2>
+                <p class="book_description">Perfect for elementary learners ready to build their foundational skills. Features practical communication tasks, listening exercises, and real-world language scenarios to boost confidence in everyday English.</p>
                 <div class="download">
                     <button class="btn-download", onclick="download('')">Student's Book</button>
                     <button class="btn-download", onclick="download('')">Audio SB</button>
@@ -211,6 +237,7 @@
             <img src="EF+3.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Pre-Intermediate</h2>
+                <p class="book_description">Designed to bridge the gap between elementary and intermediate levels. This course develops communication skills with more complex grammar structures, extended listening passages, and advanced conversation practice.</p>
                 <div class="download">
                     <button class="btn-download", onclick="download('')">Student's Book</button>
                     <button class="btn-download", onclick="download('')">Audio SB</button>
@@ -224,6 +251,7 @@
             <img src="EF+4.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Intermediate</h2>
+                <p class="book_description">Comprehensive intermediate course for fluent English learners. Covers advanced grammar, sophisticated vocabulary, engaging cultural topics, and authentic materials for confident communication at intermediate level.</p>
                 <div class="download">
                     <button class="btn-download", onclick="download('')">Student's Book</button>
                     <button class="btn-download", onclick="download('')">Audio SB</button>
@@ -258,4 +286,3 @@
     </script>
 </body>
 </html>
-
