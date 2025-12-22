@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENGLISH MIND</title>
+    <link rel="stylesheet" href="web_app.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
     :root{
@@ -171,26 +172,40 @@
     </style>
 </head>
 <body>
-    <div class="English">
-    <img src="English Mind.jpg" alt="English Mind Logo" width="500" height="300">
+    <!-- Логотип в верхнем левом углу удалён -->
+    <!-- Слово дня -->
+    <div id="word-of-the-day">
+        <div class="wotd-title" style="display: flex; align-items: center; gap: 12px;">
+            <span>Слово дня</span>
+            <button id="wotd-refresh" style="background: #fff; color: #2563eb; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(30,64,175,0.12); cursor: pointer; font-size: 1.2rem; margin-left: 8px;" title="Обновить слово дня">
+                <span>🔄</span>
+            </button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="wotd-word" id="wotd-word">...</div>
+        </div>
+        <div class="wotd-phonetic" id="wotd-phonetic" style="margin-bottom: 4px; font-size: 1.1rem; opacity: 0.85;">...</div>
+        <div class="wotd-meaning" id="wotd-meaning">...</div>
+        <div class="wotd-examples" id="wotd-examples" style="margin-top: 8px; font-size: 1rem; color: var(--text-color); opacity: 0.92;"></div>
     </div>
+    <!-- Убрано большое изображение логотипа -->
     <h3>Welcome to ENGLISH MIND</h3>
     <p>Your go-to resource for English learning materials. Explore our collection of books and solutions designed to enhance your language skills.</p>
 
     <!-- Основной каталог -->
 
-    <div id="catalogue", class="catalogue">
+    <div id="catalogue" class="catalogue">
         <div>
-            <button class="catalog", onclick="goto('books')">Books</button>
+            <button class="catalog" onclick="goto('books')">Books</button>
         </div>
         <div>
-            <button class="catalog", onclick="goto('magazines')">Magazines</button>
+            <button class="catalog" onclick="goto('magazines')">Magazines</button>
         </div>
         <div>
-            <button class="catalog", onclick="goto('vocabulary')">Vocabulary</button>
+            <button class="catalog" onclick="goto('vocabulary')">Vocabulary</button>
         </div>
         <div>
-            <button class="catalog", onclick="goto('grammar')">Grammar</button>
+            <button class="catalog" onclick="goto('grammar')">Grammar</button>
         </div>
     </div>
 
@@ -198,7 +213,7 @@
 
      <div class="books_catalogue">
         <div>
-            <button class="books_catalog", onclick="gotoBooks('english_file')">English File</button>
+            <button class="books_catalog" onclick="gotoBooks('english_file')">English File</button>
         </div>
         <div>
             <button class="books_catalog">Soluton</button>
@@ -210,77 +225,76 @@
             <button class="books_catalog">Headway</button>
         </div>
         <div>
-            <button class="books_catalog", onclick="gotoBooks('back')">Back</button>
+            <button class="books_catalog" onclick="gotoBooks('back')">Back</button>
         </div>
      </div>
 
-
      <!-- English File -->
-
-     <div class="English_File">
-
+     <div class="English_File" style="display:none; gap:12px; margin-bottom:16px;">
         <div class="file_item">
-            <img src="EF+1.jpg" alt="English File Logo" >
+            <img src="Logo/EF+1.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Beginer</h2>
                 <p class="book_description">A comprehensive beginner's course designed for absolute learners. This book introduces fundamental English vocabulary and grammar structures with interactive activities and everyday dialogue practice.</p>
                 <div class="download">
-                    <button class="btn-download", onclick="download('')">Student's Book</button>
-                    <button class="btn-download", onclick="download('')">Audio SB</button>
-                    <button class="btn-download", onclick="download('')">Workbook</button>
-                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                    <button class="btn-download" onclick="download('')">Student's Book</button>
+                    <button class="btn-download" onclick="download('')">Audio SB</button>
+                    <button class="btn-download" onclick="download('')">Workbook</button>
+                    <button class="btn-download" onclick="download('')">Audio WB</button>
                 </div>
             </div>
         </div>
-
         <div class="file_item">
-            <img src="EF+2.webp" alt="English File Logo">
+            <img src="Logo/EF+2.webp" alt="English File Logo">
             <div class="right_logo">
                 <h2>English File Elementary</h2>
                 <p class="book_description">Perfect for elementary learners ready to build their foundational skills. Features practical communication tasks, listening exercises, and real-world language scenarios to boost confidence in everyday English.</p>
                 <div class="download">
-                    <button class="btn-download", onclick="download('')">Student's Book</button>
-                    <button class="btn-download", onclick="download('')">Audio SB</button>
-                    <button class="btn-download", onclick="download('')">Workbook</button>
-                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                    <button class="btn-download" onclick="download('')">Student's Book</button>
+                    <button class="btn-download" onclick="download('')">Audio SB</button>
+                    <button class="btn-download" onclick="download('')">Workbook</button>
+                    <button class="btn-download" onclick="download('')">Audio WB</button>
                 </div>
             </div>
         </div>
-
         <div class="file_item">
-            <img src="EF+3.jpg" alt="English File Logo" >
+            <img src="Logo/EF+3.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Pre-Intermediate</h2>
                 <p class="book_description">Designed to bridge the gap between elementary and intermediate levels. This course develops communication skills with more complex grammar structures, extended listening passages, and advanced conversation practice.</p>
                 <div class="download">
-                    <button class="btn-download", onclick="download('')">Student's Book</button>
-                    <button class="btn-download", onclick="download('')">Audio SB</button>
-                    <button class="btn-download", onclick="download('')">Workbook</button>
-                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                    <button class="btn-download" onclick="download('')">Student's Book</button>
+                    <button class="btn-download" onclick="download('')">Audio SB</button>
+                    <button class="btn-download" onclick="download('')">Workbook</button>
+                    <button class="btn-download" onclick="download('')">Audio WB</button>
                 </div>
             </div>
         </div>
-
         <div class="file_item">
-            <img src="EF+4.jpg" alt="English File Logo" >
+            <img src="Logo/EF+4.jpg" alt="English File Logo" >
             <div class="right_logo">
                 <h2>English File Intermediate</h2>
                 <p class="book_description">Comprehensive intermediate course for fluent English learners. Covers advanced grammar, sophisticated vocabulary, engaging cultural topics, and authentic materials for confident communication at intermediate level.</p>
                 <div class="download">
-                    <button class="btn-download", onclick="download('')">Student's Book</button>
-                    <button class="btn-download", onclick="download('')">Audio SB</button>
-                    <button class="btn-download", onclick="download('')">Workbook</button>
-                    <button class="btn-download", onclick="download('')">Audio WB</button>
+                    <button class="btn-download" onclick="download('')">Student's Book</button>
+                    <button class="btn-download" onclick="download('')">Audio SB</button>
+                    <button class="btn-download" onclick="download('')">Workbook</button>
+                    <button class="btn-download" onclick="download('')">Audio WB</button>
                 </div>
             </div>
         </div>
-
-        <button class="file_catalog", onclick="download('back')">Back</button>
+        <button class="file_catalog" onclick="download('back')">Back</button>
      </div>
+
+
+
+
+
+
 
     <script>
 
-        function goto(section) {
+         function goto(section) {
             if (section === 'books') {
                 document.getElementById('catalogue').style.display = 'none';
                 document.querySelector('.books_catalogue').style.display = 'grid';
@@ -306,7 +320,76 @@
         }
 
 
+        
+                document.addEventListener("DOMContentLoaded", () => {
+                    function showWordWithRetry(attempt = 1) {
+                        document.getElementById("wotd-word").innerText = "Загрузка...";
+                        document.getElementById("wotd-phonetic").innerText = "";
+                        document.getElementById("wotd-meaning").innerText = "";
+                        document.getElementById("wotd-examples").innerText = "";
+
+                        getRandomWord().then(word => {
+                            fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
+                                .then(r => r.json())
+                                .then(d => {
+                                    if (!d || !d[0]) {
+                                        if (attempt < 5) return showWordWithRetry(attempt + 1);
+                                        document.getElementById("wotd-word").innerText = "Слово не найдено";
+                                        document.getElementById("wotd-phonetic").innerText = "";
+                                        document.getElementById("wotd-meaning").innerText = "Попробуйте ещё раз";
+                                        document.getElementById("wotd-examples").innerText = "";
+                                        return;
+                                    }
+                                    const entry = d[0];
+                                    document.getElementById("wotd-word").innerText = entry.word;
+                                    // Транскрипция (обязательная)
+                                    let phonetic = entry.phonetic || (entry.phonetics && entry.phonetics.find(p => p.text)?.text);
+                                    if (!phonetic) {
+                                        if (attempt < 5) return showWordWithRetry(attempt + 1);
+                                        phonetic = "Нет транскрипции";
+                                    }
+                                    document.getElementById("wotd-phonetic").innerText = phonetic;
+                                    // Перевод через MyMemory
+                                    // Определение на английском вместо перевода
+                                    let definition = "";
+                                    if(entry.meanings && entry.meanings[0] && entry.meanings[0].definitions && entry.meanings[0].definitions[0].definition) {
+                                        definition = entry.meanings[0].definitions[0].definition;
+                                    }
+                                    document.getElementById("wotd-meaning").innerText = definition ? definition : "Определение не найдено";
+                                    // Примеры предложений
+                                    let examples = [];
+                                    if(entry.meanings && entry.meanings[0] && entry.meanings[0].definitions) {
+                                        for(const def of entry.meanings[0].definitions) {
+                                            if(def.example) examples.push(def.example);
+                                            if(examples.length >= 2) break;
+                                        }
+                                    }
+                                    document.getElementById("wotd-examples").innerText = examples.length ? examples.map(e => '• ' + e).join('\n') : '';
+                                })
+                                .catch(() => {
+                                    if (attempt < 5) return showWordWithRetry(attempt + 1);
+                                    document.getElementById("wotd-word").innerText = "Слово не найдено";
+                                    document.getElementById("wotd-phonetic").innerText = "";
+                                    document.getElementById("wotd-meaning").innerText = "Попробуйте ещё раз";
+                                    document.getElementById("wotd-examples").innerText = "";
+                                });
+                        });
+                    }
+
+                    function getRandomWord() {
+                        return fetch("https://random-word-api.herokuapp.com/word?number=1")
+                            .then(r => r.json())
+                            .then(arr => arr[0]);
+                    }
+
+                    // Первое слово при загрузке
+                    showWordWithRetry();
+
+                    document.getElementById("wotd-refresh").onclick = () => {
+                        showWordWithRetry();
+                    };
+                });
+
     </script>
 </body>
 </html>
-
